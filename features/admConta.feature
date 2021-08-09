@@ -1,4 +1,4 @@
-Feature: As a usuário final
+Feature: As a usuário
     Eu quero ser capaz de entrar no sistema, modificar os dados e sair do sistema 
     Assim, eu posso ter a possibilidade de entrar e sair da minha conta
 
