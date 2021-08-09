@@ -12,7 +12,7 @@ Scenario: O artista insere sua Obra em seu acervo
     Given eu sou um artista
     And  estou na página de cadastro de Obras
     When eu insiro a imagem da minha obra
-    And eu insiro o nome 'O gato' e o valor 'R$ 500,00'
+    And eu insiro o nome 'O gato', valor 'R$ 500,00',  corrente artística 'Arte Abstrata', tipo da arte para 'Pintura Óleo sobre tela', descrição para 'O reencontro da vida e morte do gato'
     And eu clico em 'Inserir Obra'
     Then  o sistema me retorna uma mensagem de Sucesso 
     And o sistema me retorna à página de cadastro de Obras
@@ -38,3 +38,15 @@ Scenario: O artista vê a lista de exposições que participa
     Then  o Sistema me retorna uma página com uma lista das exposições em que participo
     And eu vejo os status das minhas obras nas exposições
 
+Scenario: O artista escolhe definir em quais exposições vai participar
+    Given eu sou o artista
+    And  eu estou na página do meu perfil
+    When eu seleciono o botão 'Solicitações Pendentes'
+    Then  o Sistema me retorna uma página com uma lista das solicitações de participações em exposições
+
+Scenario: O artista define se vai participar ou não de uma exposição
+    Given eu sou o artista
+    And  eu estou na página das solicitações de participações em exposições
+    When eu seleciono o botão 'aceitar' da exposição 'Encontro com o mar' da galeria 'Art Soul'
+    Then  o Sistema me retorna uma mensagem de sucesso 
+    And  o Sistema me retorna à página das solicitações pendentes

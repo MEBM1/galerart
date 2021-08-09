@@ -2,7 +2,7 @@ Feature: As a visitante
     Eu quero ser capaz de ver exposições, artistas, Galerias, indicações e favoritar qualquer uma delas
     Assim, eu posso ter acesso ao conteúdo artístico do Sistema
 
-Scenario : ver exposições de uma Galeria
+Scenario: ver exposições de uma Galeria
 	Given Eu sou um visitante  
     And Eu estou na página da Galeria 'ArtSoul'
 	And Eu consigo ver o ícone da lista de exposições
@@ -22,7 +22,6 @@ Scenario: Lista de exposições
 	And Eu consigo ver o ícone da lista de exposições
 	When Eu clico na lista de exposições
     Then Eu consigo ver uma lista de exposições resumidas contendo nome, tempo de duração, custo, local
-
 
 Scenario: Olhar página de certa exposição permanente
     Given Eu sou um visitante  
